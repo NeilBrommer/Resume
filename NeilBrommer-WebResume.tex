@@ -1,0 +1,176 @@
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size
+% ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and
+% 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,letterpaper,sans]{moderncv}
+\newcommand{\comment}[1]{}% create a way to make block comments
+\usepackage{fontawesome}
+%\usepackage[T1]{fontenc}
+\moderncvicons{awesome}
+
+% moderncv themes
+% style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and
+% 'fancy'
+\moderncvstyle{banking}
+
+% color options 'black', 'blue' (default), 'burgundy', 'green', 'grey',
+% 'orange', 'purple' and 'red'
+\moderncvcolor{blue}
+
+% to set the default font; use '\sfdefault' for the default sans serif font,
+% '\rmdefault' for the default roman one, or any tex font name
+\renewcommand{\familydefault}{\sfdefault}
+
+% uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}
+
+% character encoding
+% if you are not using xelatex ou lualatex, replace by the encoding you are
+% using
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+%\usepackage[scale=0.75]{geometry}
+\usepackage[margin=1in]{geometry}
+
+% if you want to change the width of the column with the dates
+%\setlength{\hintscolumnwidth}{3cm}
+
+% for the 'classic' style, if you want to force the width allocated to your name
+% and avoid line breaks. be careful though, the length is normally calculated to
+% avoid any overlap with your personal info; use this at your own typographical
+% risks...
+%\setlength{\makecvtitlenamewidth}{10pt}
+
+
+% personal data
+\name{Neil}{Brommer}
+
+% optional, remove / comment the line if not wanted
+%\title{Resume Title}
+
+% optional, remove / comment the line if not wanted; the "postcode city" and
+% "country" arguments can be omitted or provided empty
+\address{Spokane Valley, WA}{}{}
+
+% optional, remove / comment the line if not wanted; the optional "type" of the
+% phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{123\,--\,456\,--\,7890} % nicer formatting
+%\phone[mobile]{(123)~456~7890}
+%\phone[fax]{+3~(456)~789~012}
+
+% optional, remove / comment the line if not wanted
+%\email{jdoe@example.com}
+
+% optional, remove / comment the line if not wanted
+\homepage{neilbrommer.com}
+
+% optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}
+
+% optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}
+
+% optional, remove / comment the line if not wanted
+% not using this because it shows "username" instead of "github.com/username"
+%\social[github]{neilbrommer}
+
+% optional, remove / comment the line if not wanted
+\extrainfo{\faicon{github-alt}
+	\href{https://github.com/neilbrommer}{github.com/neilbrommer}}
+
+% optional, remove / comment the line if not wanted; '64pt' is the height the
+% picture must be resized to, 0.4pt is the thickness of the frame around it (put
+% it to 0pt for no frame) and 'picture' is the name of the picture file
+%\photo[64pt][0.4pt]{picture}
+
+% optional, remove / comment the line if not wanted
+\quote{Computer science student at Eastern Washington University graduating in
+	spring 2018.}
+
+
+% increase width of the title quote
+%\let\originalrecomputecvlengths\recomputecvlengths
+%\renewcommand*{\recomputecvlengths}{%
+%\originalrecomputecvlengths%
+%\setlength{\quotewidth}{0.8\textwidth}}
+
+% indent list bullets
+\renewcommand*{\listitemsymbol}{\hspace{0.75em}\labelitemi~}
+
+% reference formatting macro
+% Define \cvdoublecolumn, which sets its arguments in two columns without any
+% labels
+\newcommand{\cvdoublecolumn}[2]{%
+	\cvitem[0.75em]{}{%
+		\begin{minipage}[t]{\listdoubleitemcolumnwidth}#1\end{minipage}%
+		\hfill%
+		\begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+	}%
+}
+
+
+\begin{document}
+%-----       resume       ------------------------------------------------------
+\makecvtitle{}
+
+
+% arguments 3 to 6 can be left empty
+\section{Education}
+\cventry{2014 -- present}
+	{Bachelor of Science in Computer Science}
+	{Eastern Washington University}
+	{Cheney, Washington}
+	{3.44 GPA}
+	{Planning to graduate in spring 2018}
+\cventry{2011 -- 2013}
+	{Associate of Applied Science in Network Design and Administration}
+	{Spokane Community College}
+	{Spokane, Washington}
+	{3.13 GPA}
+	{Networking with Cisco switches and routers with basic Windows and Linux
+	administration}
+
+
+\section{Relevant Coursework}
+\cvlistdoubleitem
+	{Java -- Object-Oriented programming}
+	{JavaFX -- GUI programming}
+\cvlistdoubleitem
+	{Object-Oriented design patterns}
+	{Relational Databases -- SQL}
+\cvlistdoubleitem
+	{C \& Unix -- Structural and low level programming}
+	{Operating Systems -- Memory management, task switching, etc.}
+\cvlistdoubleitem
+	{Architecture -- Basic MIPS assembly}
+	{Digital Circuits -- Digital logic}
+\cvlistdoubleitem
+	{Network Programming -- Network sockets}
+	{Linux server administration -- Email, DNS}
+\cvlistdoubleitem
+	{Network administration -- routing, switching, WAN, VoIP}
+	{Windows administration -- MS Exchange, Active Directory}
+
+
+\section{Certifications}
+\cventry{September 2013 -- 2016}
+	{Cisco Certified Network Administrator}
+	{CCNA}
+	{}
+	{}
+	{Cisco's second level of computer networking certifications. Focuses on\\
+	designing and managing routed and switched networks}
+\cventry{2010 -- 2011}{Apple Certified Macintosh Technician}
+	{ACMT}
+	{}
+	{}
+	{The Apple equivalent to the A+ PC hardware certification.}
+
+
+%\section{Work History}
+
+\clearpage
+
+%-----       references       --------------------------------------------------
+
+\end{document}
