@@ -14,7 +14,7 @@
 
 % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey',
 % 'orange', 'purple' and 'red'
-\moderncvcolor{blue}
+\moderncvcolor{customblue}
 
 % to set the default font; use '\sfdefault' for the default sans serif font,
 % '\rmdefault' for the default roman one, or any tex font name
@@ -89,10 +89,10 @@
 
 
 % increase width of the title quote
-%\let\originalrecomputecvlengths\recomputecvlengths
-%\renewcommand*{\recomputecvlengths}{%
-%\originalrecomputecvlengths%
-%\setlength{\quotewidth}{0.8\textwidth}}
+\let\originalrecomputecvlengths\recomputecvlengths
+\renewcommand*{\recomputecvlengths}{%
+\originalrecomputecvlengths%
+\setlength{\quotewidth}{1.0\textwidth}}
 
 % indent list bullets
 \renewcommand*{\listitemsymbol}{\hspace{0.75em}\labelitemi~}
